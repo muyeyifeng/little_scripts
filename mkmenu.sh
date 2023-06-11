@@ -1,4 +1,4 @@
-#./scripts/feeds update -a
+./scripts/feeds update -a
 #./scripts/feeds install -a
 
 for f in `find . -maxdepth 1 -name "*.defconfig"` 
@@ -10,4 +10,4 @@ do
    make defconfig
    make menuconfig
    ./scripts/diffconfig.sh > $f
-done ;
+done;
